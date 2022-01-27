@@ -29,7 +29,7 @@ crot=''
 try:ip=req.get('https://api.ipify.org').text
 except req.exceptions.ConnectionError:print('Koneksi Buruk!')
 def login():
-    t=input("[+] Masukan Access Token Anda: {b}')
+    t=input("[+] Masukan Access Token Anda: {b}")
     try:
         r=json.loads(req.get(f'https://graph.facebook.com/me?access_token={t}').text)
         nama=r['name']
